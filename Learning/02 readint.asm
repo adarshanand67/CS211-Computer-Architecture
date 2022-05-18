@@ -7,22 +7,26 @@ response : .asciiz "Your number is: \n"
 
 .text # text directive tells the compiler to read the instructions from the file
 main:
+    # print prompt
     li $v0, 4
     la $a0, prompt
-    syscall # print prompt
-
-    li $v0, 5 # read from stdin using syscall 5
     syscall
-    move 	$t0, $v0		# $t0 = $v0
 
+    # read from stdin
+    li $v0, 5
+    syscall
+    move $t0, $v0 # reading from stdin is stored in $v0
+
+    # print response
     li $v0, 4
     la $a0, response
-    syscall # print response
+    syscall
 
+    # print $t0
     li $v0, 1
-    move $a0, $t0 # move the value of $t0 to $a0
-    syscall # print $t0
+    move $a0, $t0
+    syscall
 
     # exit the program
-    li $v0, 10 # load the value 10 into the $v0 register
-    syscall # syscall 10 means exit the program
+    li $v0, 10
+    syscall

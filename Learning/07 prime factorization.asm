@@ -23,13 +23,7 @@ main:
     la $a0, output
     syscall
 
-    # li $v0, 1
-    # move $a0, $t0 # $a0 = $t0
-    # syscall
-
-
     # prime factorization
-
     # while(i<n){
     #    if(n%i==0){
     #        print i

@@ -1,7 +1,9 @@
+#  Print the contents of array
 .data
 
 list: .word 17, 5, 92, 87, 41, 10, 23, 55, 72, 36
 listSize: .word 10
+
 msg: .asciiz "Array is: "
 space: .asciiz " "
 

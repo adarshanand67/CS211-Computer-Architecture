@@ -4,7 +4,6 @@
     output :.asciiz "The factorial of the number is: \n"
     newline: .asciiz "\n"
 
-
 ###############################################################################
 
 factorial:
@@ -18,8 +17,6 @@ factorial:
 
     li $v0, 1 # initialize result to 1
     li $t0, 1 # initialize t0 to 1
-
-    # loop through all numbers from 1 to $a0
 
 loop:
     bgt $t0, $a0, end_fact # if $a0 >= $t0, end_fact

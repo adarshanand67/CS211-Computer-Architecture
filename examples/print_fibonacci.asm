@@ -8,6 +8,7 @@
 # 	else if (n == 1) return 1;
 # 	return fib(n - 1) + fib(n – 2);
 # }
+
 # void main()
 # {
 # 	int n;
@@ -19,11 +20,10 @@
 # }
 
 .data
-
 msg: .asciiz "Enter a number: "
 fibNum: .asciiz "\nFibonacci number is: "
-.text
 
+.text
 main:
 	# print message
 	li $v0, 4

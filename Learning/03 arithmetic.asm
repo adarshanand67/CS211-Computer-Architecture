@@ -9,7 +9,7 @@ main:
 
     add $a0,$t0,$t1 # a0=$t0+$t1=2+3=5
     li $v0,1 # load 1 into $v0
-    syscall 
+    syscall  # syscall instruction 1 for printing integer
 
     addi $a0,$t0,1 # a0=$t0+1=2+1=3
     li $v0,1
